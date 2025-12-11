@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>记账本</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        margin: 20px;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+
+      h1 {
+        color: #444;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .record {
+        margin-bottom: 16px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 整个记录行的背景色 */
+      .record.expense {
+        background-color: #ffebee; /* 浅粉色背景（支出） */
+      }
+
+      .record.income {
+        background-color: #e8f5e8; /* 淡绿色背景（收入） */
+      }
+
+      .record-header {
+        padding: 8px 16px;
+        background-color: transparent; /* 透明背景，继承父级颜色 */
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        border-left: 4px solid #1890ff;
+      }
+
+      .record-content {
+        padding: 16px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #eee;
+      }
+
+      .record-text {
+        flex-grow: 1;
+        margin-right: 12px;
+        font-size: 14px;
+        color: #333;
+        word-break: break-word;
+      }
+
+      .tag {
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        min-width: 40px;
+        text-align: center;
+      }
+
+      .income {
+        background-color: #e6f7ff;
+        color: #1890ff;
+      }
+
+      .expense {
+        background-color: #fff2f0;
+        color: #ff4d4f;
+      }
+
+      .amount {
+        margin: 0 12px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        min-width: 60px;
+        text-align: right;
+      }
+
+      .delete-btn {
+        cursor: pointer;
+        color: #999;
+        font-size: 18px;
+        line-height: 1;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+
+      .delete-btn:hover {
+        background-color: #f5f5f5;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>记账本</h1>
+
+    <!-- 记录 1：支出 -->
+    <div class="record expense">
+      <div class="record-header">2023-04-05</div>
+      <div class="record-content">
+        <div class="record-text">抽烟只抽煊赫门，一生只爱一个人</div>
+        <span class="tag expense">支出</span>
+        <div class="amount">25 元</div>
+        <div class="delete-btn">×</div>
+      </div>
+    </div>
+
+    <!-- 记录 2：收入 -->
+    <div class="record income">
+      <div class="record-header">2023-04-15</div>
+      <div class="record-content">
+        <div class="record-text">3 月份发工资</div>
+        <span class="tag income">收入</span>
+        <div class="amount">4396 元</div>
+        <div class="delete-btn">×</div>
+      </div>
+    </div>
+  </body>
+</html>
