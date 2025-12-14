@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./bin/www",
-    "run": "node ./bin/www"
+    "server": "node ./bin/www"
   },
   "dependencies": {
     "connect-mongo": "^6.0.0",
